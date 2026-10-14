@@ -10,40 +10,52 @@
  */
 
 @layer components {
+  .mesh-gradient {
+    --_gradient-blend-mode: normal;
+    --_gradient-blur: 80px;
+    --_gradient:
+      radial-gradient(at 68.6% 30.7%, #52ece1 0px, transparent 50%),
+      radial-gradient(at 38% 83.7%, #f29de17a 0px, transparent 50%),
+      radial-gradient(at 2% 51.4%, #52ece194 0px, transparent 50%),
+      radial-gradient(at 4.3% 93.6%, #fa813a 0px, transparent 50%);
+    position: relative;
+    overflow: clip;
+    background: var(--_gradient) #1a1a1a;
+    background-blend-mode: var(--_gradient-blend-mode);
+  }
 
+  .mesh-gradient .frosted-backdrop {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    backdrop-filter: blur(var(--_gradient-blur));
+    -webkit-backdrop-filter: blur(var(--_gradient-blur));
+  }
 
-.mesh-gradient {
-  --_gradient-blend-mode: normal;
-  --_gradient-blur: 80px;
-  --_gradient: radial-gradient(at 68.6% 30.7%, #52ece1 0px, transparent 50%), radial-gradient(at 38% 83.7%, #f29de17a 0px, transparent 50%), radial-gradient(at 2% 51.4%, #52ece194 0px, transparent 50%), radial-gradient(at 4.3% 93.6%, #fa813a 0px, transparent 50%);
-  position: relative;
-  overflow: clip;
-  background: var(--_gradient) #1a1a1a;
-  background-blend-mode: var(--_gradient-blend-mode);
-}
-
-.mesh-gradient .frosted-backdrop {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  backdrop-filter: blur(var(--_gradient-blur));
-  -webkit-backdrop-filter: blur(var(--_gradient-blur));
-}
+  .glass {
+    @apply transition-all hover:cursor-pointer drop-shadow-lg drop-shadow-app-lobby-ring-glow-color/10 hover:drop-shadow-2xl duration-500 w-full p-2 bg-app-color-grey-5-45-percent focus:bg-app-lobby-border rounded-3xl outline outline-app-lobby-border backdrop-blur-[6px] inline-flex flex-col justify-center items-center gap-0.5;
+  }
+  .tag {
+    @apply text-xs px-1 border lowercase font-medium border-app-lobby-ring-color drop-shadow-lg drop-shadow-app-lobby-ring-glow-color bg-app-anitya-blue/25 backdrop-blur-xl rounded-full
+  }
+  .tag-red {
+    @apply text-xs px-1 border lowercase font-medium border-app-lobby-orange drop-shadow-lg drop-shadow-app-lobby-pink/30 bg-app-lobby-orange/50 backdrop-blur-lg rounded-full
+  }
 
   .btn-pill {
     @apply shrink-0 cursor-pointer whitespace-nowrap rounded-site-corner-radius-999 border px-4 py-2.5 font-site-font-family-font-1 text-[12.5px] font-semibold leading-[13px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-site-green;
   }
-  
+
   .bt-pill-sc {
     @apply border-site-color-grey-91-25-percent text-site-light-gray hover:bg-site-color-grey-91-25-percent focus:bg-site-color-grey-91-25-percent;
   }
-  
+
   .bt-pill-primary {
     @apply border-site-green bg-site-green text-site-color-azure-6 hover:bg-site-green/90 focus:bg-site-green/90;
   }
-  
+
   .bt-nav {
-    @apply w-36 text-center h-9 text-sm font-semibold text-white font-site-font-family-font-1 capitalize bg-app-color-grey-5-45-percent backdrop-blur-sm hover:bg-app-bt-nav-hover/80 transition-colors duration-100 cursor-pointer rounded-xl inline-flex justify-center items-center
+    @apply w-36 text-center h-9 text-sm font-semibold text-white font-site-font-family-font-1 capitalize bg-app-color-grey-5-45-percent backdrop-blur-sm hover:bg-app-bt-nav-hover/80 transition-colors duration-100 cursor-pointer rounded-xl inline-flex justify-center items-center;
   }
   /* .bt-nav {
     @apply w-36 text-center h-9 text-sm font-semibold text-white font-site-font-family-font-1 capitalize bg-app-bt-nav-default/80 backdrop-blur-sm hover:bg-app-bt-nav-hover/80 transition-colors duration-100 cursor-pointer rounded-xl inline-flex justify-center items-center
@@ -463,8 +475,12 @@
   --color-app-toastify-color-error: var(--app-toastify-color-error);
   --color-app-toastify-color-transparent: var(--app-toastify-color-transparent);
   --color-app-toastify-icon-color-info: var(--app-toastify-icon-color-info);
-  --color-app-toastify-icon-color-success: var(--app-toastify-icon-color-success);
-  --color-app-toastify-icon-color-warning: var(--app-toastify-icon-color-warning);
+  --color-app-toastify-icon-color-success: var(
+    --app-toastify-icon-color-success
+  );
+  --color-app-toastify-icon-color-warning: var(
+    --app-toastify-icon-color-warning
+  );
   --color-app-toastify-icon-color-error: var(--app-toastify-icon-color-error);
   --spacing-app-toastify-toast-width: var(--app-toastify-toast-width);
   --spacing-app-toastify-toast-offset: var(--app-toastify-toast-offset);
@@ -476,16 +492,32 @@
   --color-app-toastify-text-color-light: var(--app-toastify-text-color-light);
   --color-app-toastify-text-color-dark: var(--app-toastify-text-color-dark);
   --color-app-toastify-text-color-info: var(--app-toastify-text-color-info);
-  --color-app-toastify-text-color-success: var(--app-toastify-text-color-success);
-  --color-app-toastify-text-color-warning: var(--app-toastify-text-color-warning);
+  --color-app-toastify-text-color-success: var(
+    --app-toastify-text-color-success
+  );
+  --color-app-toastify-text-color-warning: var(
+    --app-toastify-text-color-warning
+  );
   --color-app-toastify-text-color-error: var(--app-toastify-text-color-error);
   --color-app-toastify-spinner-color: var(--app-toastify-spinner-color);
-  --color-app-toastify-spinner-color-empty-area: var(--app-toastify-spinner-color-empty-area);
-  --color-app-toastify-color-progress-dark: var(--app-toastify-color-progress-dark);
-  --color-app-toastify-color-progress-info: var(--app-toastify-color-progress-info);
-  --color-app-toastify-color-progress-success: var(--app-toastify-color-progress-success);
-  --color-app-toastify-color-progress-warning: var(--app-toastify-color-progress-warning);
-  --color-app-toastify-color-progress-error: var(--app-toastify-color-progress-error);
+  --color-app-toastify-spinner-color-empty-area: var(
+    --app-toastify-spinner-color-empty-area
+  );
+  --color-app-toastify-color-progress-dark: var(
+    --app-toastify-color-progress-dark
+  );
+  --color-app-toastify-color-progress-info: var(
+    --app-toastify-color-progress-info
+  );
+  --color-app-toastify-color-progress-success: var(
+    --app-toastify-color-progress-success
+  );
+  --color-app-toastify-color-progress-warning: var(
+    --app-toastify-color-progress-warning
+  );
+  --color-app-toastify-color-progress-error: var(
+    --app-toastify-color-progress-error
+  );
   --color-app-fc-01: var(--app-fc-01);
   --color-app-fc-02: var(--app-fc-02);
   --color-app-fc-03: var(--app-fc-03);
@@ -593,7 +625,9 @@
   --color-app-lobby-surface: var(--app-lobby-surface);
   --color-app-lobby-border: var(--app-lobby-border);
   --radius-app-lobby-frame-radius: var(--app-lobby-frame-radius);
-  --spacing-app-lobby-frame-outline-offset: var(--app-lobby-frame-outline-offset);
+  --spacing-app-lobby-frame-outline-offset: var(
+    --app-lobby-frame-outline-offset
+  );
   --radius-app-lobby-frame-glow-radius: var(--app-lobby-frame-glow-radius);
   --spacing-app-lobby-frame-glow-blur: var(--app-lobby-frame-glow-blur);
   --color-app-lobby-ring-color: var(--app-lobby-ring-color);
@@ -638,7 +672,9 @@
   --color-app-color-yellow-68-0-percent: var(--app-color-yellow-68-0-percent);
   --color-app-color-orange-60-50-percent: var(--app-color-orange-60-50-percent);
   --color-app-color-orange-60-0-percent: var(--app-color-orange-60-0-percent);
-  --color-app-color-magenta-78-60-percent: var(--app-color-magenta-78-60-percent);
+  --color-app-color-magenta-78-60-percent: var(
+    --app-color-magenta-78-60-percent
+  );
   --color-app-color-magenta-78-0-percent: var(--app-color-magenta-78-0-percent);
   --color-app-color-cyan-62-70-percent: var(--app-color-cyan-62-70-percent);
   --color-app-color-cyan-62-0-percent: var(--app-color-cyan-62-0-percent);
@@ -670,7 +706,9 @@
   --spacing-app-width-68: var(--app-width-68);
   --spacing-app-height-56: var(--app-height-56);
   --spacing-app-height-60: var(--app-height-60);
-  --color-app-toastify-color-transparent-2: var(--app-toastify-color-transparent-2);
+  --color-app-toastify-color-transparent-2: var(
+    --app-toastify-color-transparent-2
+  );
   --radius-app-corner-radius-10: var(--app-corner-radius-10);
   --spacing-app-width-31-5: var(--app-width-31-5);
   --leading-app-line-height-21: var(--app-line-height-21);
@@ -689,7 +727,9 @@
   --color-app-color-grey-91-7-percent: var(--app-color-grey-91-7-percent);
   --color-app-color-grey-91-0-percent: var(--app-color-grey-91-0-percent);
   --color-app-color-orange-60-24-percent: var(--app-color-orange-60-24-percent);
-  --color-app-color-magenta-78-32-percent: var(--app-color-magenta-78-32-percent);
+  --color-app-color-magenta-78-32-percent: var(
+    --app-color-magenta-78-32-percent
+  );
   --color-app-color-cyan-62-40-percent: var(--app-color-cyan-62-40-percent);
   --color-app-color-grey-5-72-percent: var(--app-color-grey-5-72-percent);
   --color-app-color-white-14-percent: var(--app-color-white-14-percent);
