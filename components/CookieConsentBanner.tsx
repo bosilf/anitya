@@ -19,7 +19,7 @@ export default function CookieConsentBanner({ privacyHref = "/privacy" }: Cookie
         </Link>
       </p>
       <div className="shrink-0">
-        <CookieConsentButtons />
+        {/* <CookieConsentButtons /> */}
       </div>
     </section>
   );

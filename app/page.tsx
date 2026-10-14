@@ -1,18 +1,16 @@
 import Image from "next/image";
 import iridescentDancer from "@/public/images/Iridescent dancer on glowing islands.png";
-import LogoLight from "@/components/icons/LogoLight";
 
 export default function Home() {
   return (
     <div className="p-2 flex-1 h-full flex flex-col">
-
       <main className="flex-1 bg-linear-to-bl from-70% from-[#0F1C21] to-app-anitya-blue/10 outline outline-app-anitya-blue/50 rounded-2xl grid grid-cols-1 lg:grid-cols-6 sm:grid-cols-2 sm:grid-rows-[1fr_auto_auto_1fr] gap-y-6 gap-x-9 lg:gap-x-19 m-auto w-full p-10">
         <div className="mb-9 lg:col-span-6 sm:col-span-2 flex flex-col items-center gap-6">
           <h1 className="text-5xl drop-shadow-2xl drop-shadow-app-bt-green-10 lg:text-8xl font-anton font-black uppercase text-center text-shadow/70 text-shadow-lg ">
             Build anything, anywhere
           </h1>
           <p className="text-sm font-app-f-b-l-font-family font-app-f-bt-m-font-weight regular drop-shadow-xl drop-shadow-app-anitya-blue/30">
-            Powered by Anitya 
+            Powered by Anitya
           </p>
         </div>
         <div className="mt-auto lg:col-span-2 lg:row-span-2 sm:row-span-2 drop-shadow-2xl drop-shadow-app-lobby-page-bg">
