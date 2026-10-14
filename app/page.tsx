@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         <div className="drop-shadow-2xl lg:items-center lg:col-span-2 lg:row-start-4 lg:col-start-3 sm:col-start-1 drop-shadow-app-lobby-ring-glow-color/20 w-full justify-center sm:items-start sm:justify-start items-center mt-3 sm:mt-0 flex flex-col gap-3">
           
-          <Link href="/dashboard" className="flex flex-col w-full pb-1.5 justify-center items-center bg-app-lobby-teal hover:bg-app-lobby-teal/90 font-inter text-black pt-3.5 px-15 lg:px-20 lg:text-xl sm:w-fit outline outline-app-lobby-ring-color drop-shadow-xl drop-shadow-app-lobby-ring-glow-color/10 hover:drop-shadow-app-lobby-ring-glow-color transition-all duration-300 cursor-pointer rounded-full ">
+          <Link href="/intro" className="flex flex-col w-full pb-1.5 justify-center items-center bg-app-lobby-teal hover:bg-app-lobby-teal/90 font-inter text-black pt-3.5 px-15 lg:px-20 lg:text-xl sm:w-fit outline outline-app-lobby-ring-color drop-shadow-xl drop-shadow-app-lobby-ring-glow-color/10 hover:drop-shadow-app-lobby-ring-glow-color transition-all duration-300 cursor-pointer rounded-full ">
             <div className="font-semibold">Start Creating</div>
             <p className="text-xs">Account required</p>
           </Link>
@@ -41,13 +41,13 @@ export default function Home() {
             <div className="font-bold text-sm">Explore Worlds</div>
             <p className="text-xs">No account required</p>
           </div>
-          <p className="hidden md:block text-xs">
+          <p className="text-xs">
             <span>Download on </span> 
             <Link className="font-semibold hover:underline" href="https://apps.apple.com/us/app/anitya-space/id6787891029">App Store</Link>
             <span> and </span>
             <Link className="font-semibold hover:underline" href="https://play.google.com/store/apps/details?id=space.anitya.app&hl=en-US&referrer=utm_source%3Danitya_site%26utm_medium%3Dwebsite%26utm_campaign%3Dwww_home_badge"> Google Play</Link>
           </p>
-          <div className="md:hidden grid grid-cols-2 w-full gap-3">
+          {/* <div className="md:hidden grid grid-cols-2 w-full gap-3">
             <div className="transition-all hover:cursor-pointer duration-100 w-full p-2 bg-app-color-grey-5-45-percent hover:bg-app-lobby-border focus:bg-app-lobby-border rounded-xl outline outline-app-lobby-border backdrop-blur-[6px] inline-flex flex-col justify-center items-center gap-0.5">
               <h3 className="flex flex-col font-semibold">
                 <span className="font-thin text-xs">Download on the</span>
@@ -60,7 +60,7 @@ export default function Home() {
                 Google Play
               </h3>
             </div>
-          </div>
+          </div> */}
         </div>
         <Image
           src={iridescentDancer}
