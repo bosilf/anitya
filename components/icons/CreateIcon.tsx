@@ -1,0 +1,27 @@
+"use client"
+
+import { useId, type SVGProps } from "react"
+
+export default function CreateIcon(props: SVGProps<SVGSVGElement>) {
+  const id = useId()
+
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <g clipPath={`url(#${id}-def-1)`}>
+    <path d="M14.2857 0H5.71429C2.55837 0 0 2.55837 0 5.71429V14.2857C0 17.4416 2.55837 20 5.71429 20H14.2857C17.4416 20 20 17.4416 20 14.2857V5.71429C20 2.55837 17.4416 0 14.2857 0Z" fill="#7DE8DF"/>
+    <mask id={`${id}-def-0`} style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="2" y="2" width="16" height="16">
+    <path d="M17.1426 2.85718H2.85693V17.1429H17.1426V2.85718Z" fill="white"/>
+    </mask>
+    <g mask={`url(#${id}-def-0)`}>
+    <path d="M5.8335 10H14.1669" stroke="black" strokeWidth="0.892857" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M10 5.8335V14.1669" stroke="black" strokeWidth="0.892857" strokeLinecap="round" strokeLinejoin="round"/>
+    </g>
+    </g>
+    <defs>
+    <clipPath id={`${id}-def-1`}>
+    <rect width="20" height="20" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+  )
+}

@@ -1,0 +1,12 @@
+import type { SVGProps } from "react"
+
+export default function PlayScreenIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path d="M12.5277 7.86673C12.6095 7.91409 12.6775 7.98214 12.7247 8.06405C12.7719 8.14595 12.7968 8.23885 12.7968 8.3334C12.7968 8.42795 12.7719 8.52084 12.7247 8.60275C12.6775 8.68466 12.6095 8.75271 12.5277 8.80007L9.14016 10.7601C9.05836 10.8074 8.96552 10.8323 8.871 10.8323C8.77649 10.8323 8.68365 10.8074 8.60184 10.7601C8.52003 10.7127 8.45215 10.6447 8.40504 10.5628C8.35792 10.4808 8.33325 10.3879 8.3335 10.2934V6.3734C8.33333 6.27901 8.35803 6.18624 8.4051 6.10442C8.45217 6.02261 8.51995 5.95463 8.60163 5.90733C8.68331 5.86002 8.77601 5.83507 8.8704 5.83496C8.96479 5.83486 9.05755 5.85961 9.13933 5.90673L12.5277 7.86673Z" stroke="white" strokeOpacity="0.9" strokeWidth="1.45833" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M10 14.1667V17.5001" stroke="white" strokeOpacity="0.9" strokeWidth="1.45833" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M6.6665 17.5H13.3332" stroke="white" strokeOpacity="0.9" strokeWidth="1.45833" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M16.6665 2.5H3.33317C2.4127 2.5 1.6665 3.24619 1.6665 4.16667V12.5C1.6665 13.4205 2.4127 14.1667 3.33317 14.1667H16.6665C17.587 14.1667 18.3332 13.4205 18.3332 12.5V4.16667C18.3332 3.24619 17.587 2.5 16.6665 2.5Z" stroke="white" strokeOpacity="0.9" strokeWidth="1.45833" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )
+}
