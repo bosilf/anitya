@@ -2,6 +2,7 @@ import Image from "next/image";
 import iridescentDancer from "@/public/images/Iridescent dancer on glowing islands.png";
 import IconLogo from "@/components/icons/IconLogo";
 import Link from "next/link";
+import AnityaGif from "@/public/images/gifs/Anitya-Seamless-Loop.gif"
 
 export default function Home() {
   return (
@@ -63,7 +64,8 @@ export default function Home() {
           </div> */}
         </div>
         <Image
-          src={iridescentDancer}
+          src={AnityaGif}
+          unoptimized
           alt=""
           preload
           className="z-10 w-full lg:col-span-2 lg:row-span-2 lg:col-start-3 aspect-5/4 sm:row-start-2 sm:row-span-2 sm:col-start-2 outline drop-shadow-2xl drop-shadow-app-lobby-pink/20 outline-app-lobby-border rounded-2xl object-cover pointer-events-none"
