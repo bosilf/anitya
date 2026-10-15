@@ -97,7 +97,7 @@ export default function Intro() {
             {currentLevel.content}
           </p>
         </Link>
-        <Link href="/explore" className="col-start-1 row-start-3 glass items-center hover:outline-app-color-white-46-percent  lg:w-90 h-45 justify-center grid grid-rows-[1fr_1fr_3fr] gap-2 p-4 px-10 text-3xl font-bold aspect-4/3">
+        <Link href="/explore" className="col-start-1 row-start-3 lg:row-start-2 glass items-center hover:outline-app-color-white-46-percent  lg:w-90 h-45 justify-center grid grid-rows-[1fr_1fr_3fr] gap-2 p-4 px-10 text-3xl font-bold aspect-4/3">
           <h2 className="row-start-2 m-auto">Explore</h2>
           <p className="mb-auto row-start-3 text-xs text-center font-normal">
             Explore worlds built by the Anitya community. Jump in, play, and
