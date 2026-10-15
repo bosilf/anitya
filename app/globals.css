@@ -32,6 +32,13 @@
     -webkit-backdrop-filter: blur(var(--_gradient-blur));
   }
 
+  .expand-menu-sm {
+    @apply flex h-8 grow m-1 items-center gap-3 rounded-lg px-2 text-sm font-medium transition-colors hover:bg-app-lobby-border focus:bg-app-lobby-border focus-visible:outline-2 focus-visible:outline-app-fc-06
+  }
+  .expand-menu-md {
+    @apply flex h-12 w-full items-center gap-3 rounded-lg px-3 text-sm font-medium transition-colors hover:bg-app-lobby-border focus:bg-app-lobby-border focus-visible:outline-2 focus-visible:outline-app-fc-06
+  }
+
   .glass {
     @apply transition-all hover:cursor-pointer drop-shadow-lg hover:drop-shadow-app-lobby-border/40 drop-shadow-app-lobby-ring-glow-color/10 hover:drop-shadow-2xl duration-500 w-full p-2 bg-app-color-grey-5-45-percent focus:bg-app-lobby-border rounded-3xl outline outline-app-lobby-border backdrop-blur-[6px] inline-flex flex-col justify-center items-center gap-0.5;
   }

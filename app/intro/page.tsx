@@ -26,7 +26,7 @@ export default function Intro() {
 
   return (
     <main className="flex-1 flex p-3 py-12 gap-10 lg:gap-20 flex-col justify-center items-center">
-      <div className="flex flex-col gap-4 drop-shadow-2xl drop-shadow-app-lobby-ring-glow-color/50">
+      <div className="flex flex-col px-10 gap-4 drop-shadow-2xl drop-shadow-app-lobby-ring-glow-color/50">
         <h1 className="text-center font-anton text-4xl text-pretty">
           Start your creative journey with anitya
         </h1>
